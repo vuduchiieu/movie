@@ -9,15 +9,16 @@ const Contexts = ({ children }) => {
     const data = async () => {
       try {
         const res = await axios.get(
-          "https://teachingk18.github.io/WF_Test_ver2/data.json"
+          "https://be-movie-lake.vercel.app/v1/movies"
         );
-        setListMovie(res.data);
+        setListMovie(res.data.allMovies);
       } catch (error) {
         console.log(error);
       }
     };
     data();
   }, []);
+
   return (
     <AppContext.Provider value={{ listMovie }}>{children}</AppContext.Provider>
   );

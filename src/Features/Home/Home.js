@@ -59,7 +59,7 @@ function Home() {
                   key={i}
                   className={cx("movie")}
                 >
-                  <img src={item.image} alt="" />
+                  <img src={item.image.url} alt="" />
                   <h3>{item.name}</h3>
                   <div className={cx("time")}>
                     <p>{item.time}min</p>
@@ -81,7 +81,7 @@ function Home() {
       ) : (
         <div className={cx("detail")}>
           <div className={cx("cover")}>
-            <img src={movie.image} alt="" />
+            <img src={movie.image.url} alt="" />
           </div>
           <div className={cx("info-movie")}>
             <div className={cx("header")}>
