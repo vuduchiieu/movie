@@ -69,12 +69,23 @@ function Home() {
               ))}
             </div>
             <div className={cx("action")}>
-              <button onClick={handlePrevPage} disabled={currentPage === 1}>
-                <img src={icon.prev} alt="" />
-              </button>
-              <button onClick={handleNextPage}>
-                <img src={icon.next} alt="" />
-              </button>
+              <p>Page {currentPage}</p>
+              <div className={cx("btn")}>
+                <button
+                  onClick={handlePrevPage}
+                  style={
+                    currentPage === 1
+                      ? { backgroundColor: "#eee", cursor: "default" }
+                      : {}
+                  }
+                  disabled={currentPage === 1}
+                >
+                  <img src={icon.prev} alt="" />
+                </button>
+                <button onClick={handleNextPage}>
+                  <img src={icon.next} alt="" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
